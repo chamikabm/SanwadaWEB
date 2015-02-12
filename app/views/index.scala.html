@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sanwada - Dialog Act Recognition for Text Based Sinhala</title>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/base.css")" />
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/dark.css")" />
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/media.queries.css")" />
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/tipsy.css")" />
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("javascripts/fancybox/jquery.fancybox-1.3.4.css")" />
+	<link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/fontscss.css")"/>
+	
+	<!-- Javascripts -->
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/html5shiv.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.tipsy.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/fancybox/jquery.fancybox-1.3.4.pack.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/fancybox/jquery.easing-1.3.pack.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.touchSwipe.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.mobilemenu.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.infieldlabel.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.echoslider.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/fluidapp.js")"></script>
+	<script type="text/javascript" src="@routes.Assets.at("javascripts/functions.js")"></script>
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="@routes.Assets.at("images/favicon.png")" />
+	<link rel="apple-touch-icon" href="@routes.Assets.at("images/apple-touch-icon.png")">
+	<link rel="apple-touch-icon" sizes="72x72" href="@routes.Assets.at("images/apple-touch-icon-72x72.png")">
+	<link rel="apple-touch-icon" sizes="114x114" href="@routes.Assets.at("images/apple-touch-icon-114x114.png")">
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$('input[name="all"],input[name="title"]').bind('click', function(){
+					var status = $(this).is(':checked');
+				$('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
+			});
+		});	
+	</script>
+	
+	<script type="text/javascript">
+	function downloadFile(){
+		window.location = '/download/downloadClassifiedFile/download.txt';
+	}
+	</script>
+	
+	
+</head>
+<body>
+	<!-- Start Wrapper -->
+	<div id="page_wrapper">
+		
+	<!-- Start Header -->
+	<header>
+		<div class="container">
+			<!-- Start Social Icons -->
+			<aside>
+				<ul class="social">
+					<li class="facebook"><a href="">Facebook</a></li>
+					<li class="twitter"><a href="http://twitter.com/two2twelve">Twitter</a></li>
+					<li class="email"><a href="" title="sss">Email</a></li>
+					<li class="rss"><a href="" title="App Updates">RSS</a></li>
+					<!-- More Social Icons:
+					<li class="dribbble"><a href="">Dribbble</a></li>
+					<li class="google"><a href="">Google</a></li>
+					<li class="flickr"><a href="">Flickr</a></li>
+					-->
+				</ul>
+			</aside>
+			<!-- End Social Icons -->
+			
+			<!-- Start Navigation -->
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#research">Research</a></li>					
+					<li><a href="#team">Team</a></li>
+					<li><a href="#downloads">Downloads</a></li>
+					<li><a href="#documents">Documents</a></li>
+					<li><a href="#demo">Demos</a></li>
+					<li><a href="#api">API</a></li>
+					<li><a href="#contact">Contact US</a></li>
+				</ul>
+				<span class="arrow"></span>
+			</nav>
+			<!-- End Navigation -->
+		</div>
+	</header>
+	<!-- End Header -->
+	
+	<section class="container">
+		
+		<!-- Start App Info -->
+		<div id="app_info">
+			<!-- Start Logo -->
+			<a href="#home" class="logo">
+				<img src="@routes.Assets.at("images/dark-logo.png")" alt="Fluid App" />
+			</a>
+			<!-- End Logo -->
+			<span class="tagline">Dialog Act Recognition for Text Based Sinhala.</span>
+			<p>
+				This study is concerned with the classical machine learning approaches to the task of Dialogue Act Recognition for text based Sinhala. A new annotated corpus for Sinhala language is built along with a comprehensive dialogue act tag set. We performed an evaluation based on features identified in utterances. Evaluation is performed on features that used in other studies as well as newly identified features for Sinhala. Using the best performing feature set we have performed an evaluation for effectiveness of classifiers. Considering the test results on features, we identified the best performing feature set for Sinhala language. Considering the result of classifier test, we identified the best performing classifier for Sinhala language.
+			</p>
+			
+			<div class="buttons">
+				<a href="#" class="large_button" id="android">
+					<em style="margin-left:100px;">Download now for</em> <div style="margin-left:105px;">Desktop</div>
+				</a>
+			</div>
+			
+			<div class="price centered"> <!-- Alignments options: right_align, left_align, centered -->
+				<p>Just download Sanwada for free!</p>
+			</div>
+		</div>
+		<!-- End App Info -->		
+		
+		<!-- Start Pages -->
+		<div id="pages">
+			<div class="top_shadow"></div>
+			
+			<!-- Start Home -->
+			<div id="home" class="page">
+				
+				<div id="slider">
+
+					<div class="slide" data-effect-out="slide">
+						
+						<div class="background iphone-black">
+							<img src="@routes.Assets.at("images/slider/iphone-back.jpg")" alt="" />
+						</div>
+						
+						<div class="foreground iphone-black">
+							<img src="@routes.Assets.at("images/slider/iphone-front.jpg")" alt="" />
+						</div>
+						
+					</div>
+
+					
+					<div class="slide">
+						
+						<div class="background android">
+							<img src="@routes.Assets.at("images/slider/android-back.jpg")" alt="" />
+						</div>
+						
+						<div class="foreground android">
+							<img src="@routes.Assets.at("images/slider/android-back.jpg")" alt="" />
+						</div>
+						
+					</div>
+
+
+					<div class="slide">
+						
+						<div class="background ipad-white">
+							<img src="@routes.Assets.at("images/slider/ipad.jpg")" alt="" />
+						</div>
+												
+					</div>
+					
+				</div>
+			
+			</div>
+			<!-- End Home -->
+			
+			<!-- Start Team -->
+			<div id="team" class="page">
+				
+				<h1>Team</h1>
+				
+				<div class="about_us content_box">
+					<div class="one_half">
+						<h2>About Us</h2>
+						<p>We are a group of final year undergraduates of Department of Computer Science and Engineering at University of Moratuwa who are passionated about natural language processing and actively contributes for 
+						the development of Sinhala language in the means of Computer Science.  </p>
+					</div>
+
+					<div class="one_half column_last">
+						<img style="border-radius: 10px;" src="@routes.Assets.at("images/about-main.png")" alt="" />
+					</div>
+				</div>
+				
+				<div class="team_members">
+					<div class="person one_half">
+						<img src="@routes.Assets.at("images/members/1.jpg")" alt="" />
+						<h3>Dr. Surangika Ranthunga</h3>
+						<span>Project Supervisor</span>
+						<ul class="social">
+							<li class="facebook"><a href="">Facebook</a></li>
+							<li class="twitter"><a href="">Twitter</a></li>
+							<li class="dribbble"><a href="">Dribbble</a></li>							
+						</ul>
+					</div>
+					<div class="person one_half">
+						<img src="@routes.Assets.at("images/members/2.jpg")" alt="" />
+						<h3>Chamika Kasun</h3>
+						<span>Computer Scientist</span>
+						<ul class="social">
+							<li class="facebook"><a href="">Facebook</a></li>
+							<li class="twitter"><a href="">Twitter</a></li>
+							<li class="dribbble"><a href="">Dribbble</a></li>							
+						</ul>
+					</div>
+					<div class="person one_half column_last">
+						<img src="@routes.Assets.at("images/members/3.jpg")" alt="" />
+						<h3>Dammina Sahabandu</h3>
+						<span>Computer Scientist</span>
+						<ul class="social">
+							<li class="facebook"><a href="">Facebook</a></li>
+							<li class="twitter"><a href="">Twitter</a></li>
+							<li class="dribbble"><a href="">Dribbble</a></li>							
+						</ul>
+					</div>
+					<div class="person one_half">
+						<img src="@routes.Assets.at("images/members/4.jpg")" alt="" />
+						<h3>Sudheera Palihakkara</h3>
+						<span>Computer Scientist</span>
+						<ul class="social">
+							<li class="facebook"><a href="">Facebook</a></li>
+							<li class="twitter"><a href="">Twitter</a></li>
+							<li class="dribbble"><a href="">Dribbble</a></li>							
+						</ul>
+					</div>
+					<div class="person one_half column_last">
+						<img src="@routes.Assets.at("images/members/5.jpg")" alt="" />
+						<h3>Ahswan Samsudeen</h3>
+						<span>Computer Scientist</span>
+						<ul class="social">
+							<li class="facebook"><a href="">Facebook</a></li>
+							<li class="twitter"><a href="">Twitter</a></li>
+							<li class="dribbble"><a href="">Dribbble</a></li>							
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<!-- End Team -->
+				
+			<!-- Start Features -->
+			<div id="research" class="page">
+				
+				<h1>Our Research</h1>
+				
+				<div class="feature_list content_box">
+						<p>Do you want to use Sinhala language voice assistance application like Siri? 
+						Do you think it’s good to have Sinhala automated question and answering system? 
+						Do you need a summary after a meeting held in Sinhala? With the implementation 
+						of Sinhala Unicode, the platform for this has been set But, In order to make all 
+						these fantastic things, we need to do a lot of preliminary works related to Sinhala 
+						language processing such as Dialogue Act Recognition, POS tagging and translation. 
+						Among these DA recognition holds an important place. So, the main objective of our 
+						research is to make use of the already existing research for Dialog Act Recognition 
+						for English and explore how it can be used in the context of Sinhala.</p>
+					
+						<br>
+					
+						<h4>What is Dialogue Act? </h4>	
+											
+						<p>A Dialogue Act represents the meaning of an utterance at the level of illocutionary force.
+						 It means recognizing an utterance or a sentence as a specific DA type such as statements,
+						  requests, questions, apologies and thanking. These acts are for expressing a certain attitude,
+						   For example, a statement expresses a belief, a request expresses a desire, and an apology 
+						   expresses regret.</p>
+						
+						<br>
+						<p>Ex:</p>
+						
+						<p>ඇයට කෑම පිසින්න පුලුවන්ද - question</p>
+						<p>ඇයට කෑම පිසින්න පුලුවන් - statement</p>
+						
+						<br>
+						
+						<h4>Methodology </h4>
+						
+						<p>Since there is no conversational corpus exists, a corpus was created from Sinhala 
+						subtitles for English movies. A set of dialog acts was identified based on the commonly
+						 used Dialog acts for English. Similarly, feature selection was started with the common
+						  features used for English, and later on the study Sinhala-specific features were identified
+						   to improve the classification accuracy. Using the best performing feature set we have 
+						   performed an evaluation for effectiveness of classification process. We also experimented
+						    with multiple classifiers to select the best performing classifier for Sinhala language.</p>
+						    
+						    <br>
+						    <br>
+						    
+						   <img style="float:left; width:600px;" src="@routes.Assets.at("images/process.png")" alt="" />	 
+						    
+						    
+
+					
+				</div>
+				
+			</div>
+			<!-- End Features -->		
+			
+			<!-- Start Downloads -->
+			<div id="downloads" class="page">
+				
+				<h1>Downloads</h1>
+				
+				<h3>Download our Sanwada Corpus.</h3>
+				
+				<div class="content_box">
+				
+					<div class="cloud">
+						<div class="cloud-elements">
+							<div class="text-1">
+								<span class="ok"></span>
+								Sanwada Corpus
+							</div>
+							<div class="text-2" style="margin-left: 42px;">
+								<span class="green">Download</span> from here!
+							</div>
+						</div>
+					</div>
+				
+					
+					<div class="logo" style="margin-top: 88px;">
+							<img style="float:left;" src="@routes.Assets.at("images/downloadman.png")" alt="" />								
+							<a href="https://drive.google.com/file/d/0B3_ciErXeEIZV1RKVXJqX2xKa3M/edit" target="_blank"><img src="@routes.Assets.at("images/download_folder.png")" alt="" style="margin-top: 146px; width: 146px;"></a>
+					</div>
+					
+				</div>
+				
+				<article class="release" style="width:600px;"></article>
+				<div class="content_box">
+				
+				<h3>Download our Sanwada Desktop Application.</h3>
+				
+					<div class="logo" style="margin-top:-80px;">						
+							<a href="#"><img src="@routes.Assets.at("images/desktop.png")" alt="" style="margin-left:75px;"></a>
+					</div>			
+				
+				</div>
+				
+				<article class="release" style="width:600px;"></article>
+				<div class="content_box">
+				
+				<h3>Download our Sanwada Mobile Application.</h3>
+				
+					<div class="logo" style="margin-top:-80px;">						
+							<a href="#"><img src="@routes.Assets.at("images/mobile.png")" alt="" style="height:475px; margin-top: 100px; margin-left:190px"></a>
+					</div>			
+				
+				</div>
+				
+			</div>
+			<!-- End Downloads -->
+						
+			<!-- Start Documents -->
+			<div id="documents" class="page">
+				
+				<h1>Our Research Publications</h1>
+				
+				<div class="press_mentions">
+					<ul>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Symposium on Language Technology for South Asia 2015 in Sri Lanka "</p>
+								<address>
+									<span class="date">Posted on February 3rd, 2015</span>
+									<a  href="/download/Symposium on Language Technology in South Asia camera ready.pdf"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>" 2015 Conference of the North American Chapter of the Association for Computational Linguistics – Human Language Technologies (NAACL HLT 2015) "</p>
+								<address>
+									<span class="date">Posted on December 1st, 2014</span>
+									<a  href="/download/naaclhlt2015.pdf"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"4th  International Conference on Artificial Intelligence and Applications in Engineering and Technology, IEEE ICAIET2014 in Malaysia "</p>
+								<address>
+									<span class="date">Posted on November 3rd, 2014</span>
+									<a  href="/download/Dialogue Act Recognition for Text Based Sinhala.pdf"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+				
+				<h1>Our Research Documents</h1>
+				
+				<div class="press_mentions">
+					<ul>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/pp.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Final Year Presentaionon on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on February 11th, 2015</span>
+									<a  href="/download/Presentation.pptx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Final Year Project Document on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on February 10th, 2015</span>
+									<a  href="/download/FinalReport.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>	
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"RESTful API Documentation on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on February 9th, 2015</span>
+									<a  href="/download/SanwadaAPI_Documentation.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Classifier Selection Document on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on January 3rd, 2015</span>
+									<a  href="/download/ClassifierSelection.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/excel.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Experiment Best Performing Feature Set on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on December 13th, 2014</span>
+									<a href="/download/bestforming_features.xlsx">Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Feature Selection Document on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on November 23rd, 2015</span>
+									<a  href="/download/FeatureSelection.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/pp.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Litreature Review Presentation on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on November 11th, 2014</span>
+									<a href="/download/LiteratureReviewSanwada-FYP.docx">Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Litreature Review on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on November 2nd, 2014</span>
+									<a  href="/download/FeatureSelection.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>						
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/excel.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Experiment 3 Document with Final Tag Set on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on October 28th, 2014</span>
+									<a href="/download/Experiment 3_with16 _Final_Tag_Set v3.0.xlsx">Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/excel.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Experiment 2 Document with 18 Tag Set on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on October 15th, 2014</span>
+									<a href="/download/Experiment 2 _ with 18 tags v2.0.xlsx">Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/excel.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Experiment 1 Document with 16 Tag Set on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on October 11th, 2014</span>
+									<a href="/download/Experiment 1 _ with 16 tags v1.0.xlsx">Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Tag Set Selection Document on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on September 19th, 2015</span>
+									<a  href="/download/Tag Set Selection.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+						<li>
+							<div class="logo">
+								<img src="@routes.Assets.at("images/doc_types/word.png")" alt="" />
+							</div>
+							<div class="details">
+								<p>"Our Research Documentation on Our Research and Development Project."</p>
+								<address>
+									<span class="date">Posted on September 3rd, 2015</span>
+									<a  href="/download/Our Research.docx"  >Download Document &#x2192;</a>
+								</address>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+
+				
+			</div>
+			<!-- End Documents -->
+					
+			<!-- Start Demo -->
+			<div id="demo" class="page">
+				
+				<h1>See Sanwada in action</h1>
+				
+				<h2>Sanwada Uttarance Classifier</h2>
+				
+				<p>Please enter a Sinhala text to Check relevant DA Tag category.</p>
+				
+				<form  style="margin-top:10px;" action="javascript:submitform();" method="post">
+						<div class="row">
+							<p>
+								<label for="name">Enter a Sinhala Text</label>
+							</p>
+						</div>
+						<div class="row" style="width:600px;">
+							<p>
+								<input type="text" name="name" id="name" value="" />  
+							</p>
+						</div>
+						<div style="margin-top:20px;" class="row">
+							<p>
+						<input type="submit" class="button white" value="Classify &#x2192;" />
+							</p>
+						</div>
+				</form>
+					
+					<div id="classifiedResult" style="margin-top:25px; color: fuchsia; ">
+					</div>
+					
+				<div class="content_box" style="margin-top: 25px; margin-bottom: 100px;">
+				<h2>Sanwada Meeting Summarizer</h2>
+				
+				<p>Please Upload a Sinhala text File to Summarize. </p>
+				<br>
+				
+						<h3>Step 1. Upload Your Sinhala Text file to Sanwada Server</h3>
+						<div class="row">
+						<form action="javascript:submitform2();"  style="margin-top:10px;"   method="post" enctype="multipart/form-data">
+							<p>							 
+								<input id="uploadFile" name="txtFile" type="file">							
+								<input type="submit" class="button" value="Upload &#x2192;" />
+								
+								<img id="loaderImage" style="display:none; absolute; margin-top:-2px; width:28px; margin-left:10px;" src="@routes.Assets.at("images/loader3.gif")" alt="" />
+							
+							</p>
+						</form>
+						</div>
+						
+						
+						<div id="showhide2" style="display: none;">
+							<form action="javascript:submitform3();"  style="margin-top:10px;"   method="post" enctype="multipart/form-data">
+								<h3 style="margin-top: 25px;">Step 2. Select Tags to Summarize your File</h3>
+								<div class="row" style="font-family: sans-serif;color: white;line-height: 20px;">
+									<li>
+										  <input  type="checkbox" name="all" value="17" />All
+										  <ul style="float: left; margin-top: 30px;">			   
+											        <input type="checkbox" name="tags[]" value="1">Statement<br>
+													<input type="checkbox" name="tags[]" value="2" >Backchannel/Acknowledge<br>
+													<input type="checkbox" name="tags[]" value="3" >Opinion <br>
+													<input type="checkbox" name="tags[]" value="4" >Abandoned/Uninterpretable <br>
+													<input type="checkbox" name="tags[]" value="5" >Yes- No Question <br>
+													<input type="checkbox" name="tags[]" value="6" >Yes answers<br>
+													<input type="checkbox" name="tags[]" value="7" >Conventional closing<br>
+													<input type="checkbox" name="tags[]" value="8" >Expressive <br>
+										  </ul>
+										  <ul style="float:right; margin-top: 30px;">			    
+										     	    <input type="checkbox" name="tags[]" value="9" >Open question<br>
+													<input type="checkbox" name="tags[]" value="10" >Reject<br>
+													<input type="checkbox" name="tags[]" value="11" >Apology<br>
+													<input type="checkbox" name="tags[]" value="12" >Thanking<br>
+													<input type="checkbox" name="tags[]" value="13" >Conventional opening<br>
+													<input type="checkbox" name="tags[]" value="14" >Backchannel Question<br>
+													<input type="checkbox" name="tags[]" value="15" >No answer<br>
+													<input type="checkbox" name="tags[]" value="16" >Request/Command/Order<br>
+										  </ul>
+									 </li>									
+								</div>						
+							
+								<div class="row" style="font-family: sans-serif;color: white;">
+								<h3 style="margin-top: 200px;">Step 3. Please click on Summarize button to Summarize your File.</h3>
+								
+								<input type="submit" class="button" value="Summarize &#x2192;" />						
+								<img id="loaderImage2" style="display:none; margin-left: 30px; margin-top: 2px; position: absolute;" src="@routes.Assets.at("images/loader2.gif")" alt="" />
+							
+								</div>
+
+						</form>
+						
+						</div>
+						
+						<div id="showhide" class="row" style="font-family: sans-serif;color: white; display: none;">
+							<h3 style="margin-top:20px;">Step 4. Please click on Download button to donwload your summarized file.</h3>
+							<input type="button"  class="button" onclick="downloadFile();" value="Download &#x2192;" />
+						</div>
+				</div>
+
+			</div>
+			<!-- End Demo -->
+			
+			<!-- Start Start Contact -->
+			<div id="contact" class="page">
+				
+				<h1>Contact</h1>
+				
+				<p>For general questions, bug reports or press inquires please fill out the form below.</p>
+				
+				<div id="contact_form">
+					
+					<div class="validation">
+						<p>Oops! Please correct the highlighted fields...</p>
+					</div>
+
+					<div class="success">
+						<p>Thanks! I'll get back to you shortly.</p>
+					</div>
+				
+					<form action="javascript:;" method="post">
+						<div class="row">
+							<p class="left">
+								<label for="name">Name*</label>
+								<input type="text" name="name" id="name" value="" />
+							</p>
+							<p class="right">
+								<label for="email">Email*</label>
+								<input type="text" name="email" id="email" value="" />
+							</p>
+						</div>
+					
+						<div class="row">
+							<p class="left">
+								<label for="website">Website</label>
+								<input type="text" name="website" id="website" value="" />
+							</p>
+							<p class="right">
+								<label for="subject">Subject</label>
+								<input type="text" name="subject" id="subject" value="" />
+							</p>
+						</div>
+					
+						<p>
+							<label for="message" class="textarea">Message</label>
+							<textarea class="text" name="message" id="message"></textarea>
+						</p>
+					
+						<input type="submit" class="button white" value="Send &#x2192;" />
+					</form>
+				
+				</div>
+				
+			</div>
+			<!-- End Start Contact -->
+			
+			<!-- Start API -->
+			<div id="api" class="page">
+				
+				<h1>Sanwada API Release Note</h1>
+	
+				<div class="releases">
+										
+					<article class="release">
+						<h2>Version 1.0.1</h2>
+						<span class="date">Released on Fabruary 2nd, 2015</span>
+						<ul>
+							<li class="new"><span><b>New</b></span> File Summarization</li>
+						</ul>
+					</article>
+					
+					<article class="release">
+						<h2>Version 1.0.0</h2>
+						<span class="date">Released on January 13th, 2015</span>
+						<ul>
+							<li class="new"><span><b>New</b></span> Uttarance Classification</li>
+						</ul>
+					</article>
+
+					
+				</div>
+				
+				<div class="feature_list content_box">
+				
+					<h3>Sanwada API</h3>
+					
+					<p>Sanwada is a Dialog act recognition tool for Sinhala. The web application is available at www.sanwada.lk.
+					 The REST API is exposed to developers to integrate Dialog act recognition for text based Sinhala
+					  functionality into the online applications built. 
+					</p>
+					
+					<br>
+					<h4>Publicly Exposed Endpoints</h4>
+					
+					<p><a href="#">www.sanwada.lk /classify</a> – <strong>POST</strong></p>
+					<p><a href="#">www.sanwada.lk /Upload/fileUpload</a> – <strong>POST</strong></p>
+					<p><a href="#">www.sanwada.lk /Summarize/fileSummarize</a> – <strong>GET</strong></p>
+					
+					<br>
+					<h4>POST / classify</h4>
+					<p>In this RESTful API function you can get classify any Sinhala utterance in to defined tag set. 
+					In order to use this functionality you can send a JSON object that having Sinhala utterance and 
+					you will get a JSON object response with the relevant matching tag with HTTP 200 OK for the input
+					 utterance.  </p>
+					 
+					 <br>
+					 <h5>Resource URL</h5>
+					 <p><a href="#">www.sanwada.lk /classify </a></p>
+					 
+					 <br>
+					 <h5>Parameters</h5>
+					 <p>String inputText</p>
+					 
+					 <br>
+					 <h5>Sample Request JSON</h5>
+					 <p><strong>JSON Object</strong></p>
+					 <div style="color: white; margin-bottom: 10px !important;">
+						 [{
+						 " inputText " : " ඇයි ඔයා මෙච්චර කෑම ගත්තේ?" 
+						 }]
+					 </div>									 
+					 
+					<p><strong>Sample Response</strong></p>
+					<div style="color: white;">
+						HTTP 200 OK
+						[{
+						" tagType" : "Open Question "
+						}]
+					</div>
+					
+				</div>
+
+				
+			</div>
+			<!-- End API -->
+			
+			<div class="bottom_shadow"></div>
+		</div>
+		<!-- End Pages -->
+		
+		<div class="clear"></div>
+	</section>
+	
+	<!-- Start Footer -->
+	<footer class="container">
+		<p>2015 - Univesity of Moratuwa - Computer Science and Engineering. &copy; Sanwada</p>
+	</footer>
+	<!-- End Footer -->
+	
+	</div>
+	<!-- End Wrapper -->
+
+</body>
+</html>
